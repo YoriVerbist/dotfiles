@@ -98,6 +98,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vim="vim"
+alias vi="nvim"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/yori/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -112,4 +115,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
