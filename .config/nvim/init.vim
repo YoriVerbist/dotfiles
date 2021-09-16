@@ -32,20 +32,6 @@ let mapleader = " "
 
 
 """""""""""""""""""""""""""""
-" Kite setup
-"""""""""""""""""""""""""""""
-
-" use <Tab> for kite selection
-let g:kite_tab_complete=1
-
-" All the languages Kite supports
-let g:kite_supported_languages = ['*']
-
-"set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
-"set laststatus=2  " always display the status line
-
-
-"""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""
 
@@ -62,6 +48,9 @@ Plug 'dense-analysis/ale'
 
 " YouCompleteMe
 Plug 'ycm-core/YouCompleteMe'
+
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 call plug#end()
 
@@ -107,7 +96,6 @@ let g:ale_fixers = {
 
 " YouCompleteMe
 let g:ycm_max_num_candidates = 10
-nnoremap <silent> <Leader>h :YcmCompleter GetHover<CR>
 "nnoremap <silent> <Leader>h :YcmCompleter GetDoc<CR>
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 " only works with: c, cpp, c, cpp, cuda, cs, go, java, javascript, rust, typescript
