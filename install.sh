@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 echo 'Pull the repo to check for updates'
 git pull origin master;
@@ -7,8 +7,8 @@ cd $HOME;
 
 # Install needed packages
 echo 'Start installing all the packages'
-apt-get update
-apt-get install i3 feh compton kitty neovim tmux zsh curl
+sudo apt-get update
+sudo apt-get install -y i3 feh compton kitty neovim tmux zsh curl zathura
 
 echo 'Installing oh-my-zsh'
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
