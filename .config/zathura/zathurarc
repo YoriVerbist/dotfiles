@@ -36,3 +36,7 @@ set recolor-keephue             "false"
 
 # Invert Color
 map <C-i> recolor
+
+# Zoom in and out
+map <C-+> zoom in
+map <C--> zoom out
