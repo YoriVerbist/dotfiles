@@ -52,6 +52,9 @@ Plug 'ycm-core/YouCompleteMe'
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" Coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 """""""""""""""""""""""""""""
