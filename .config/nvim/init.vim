@@ -30,6 +30,8 @@ inoremap jk <esc>
 " <Leader> key
 let mapleader = " "
 
+" make sure .pl files are interpreted as prolog files
+let g:filetype_pl="prolog"
 
 """""""""""""""""""""""""""""
 " Plugins
@@ -53,7 +55,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -94,7 +96,6 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'haskell': ['hlint'],
-\   'prolog': ['swipl'],
 \}
 
 " YouCompleteMe
