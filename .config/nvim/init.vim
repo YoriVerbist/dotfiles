@@ -13,7 +13,7 @@ set expandtab
 " auto indent (use the same indent as the previous line)
 set ai
 " show line numbers
-set number
+set number relativenumber
 " highlight searches when searching
 set hlsearch
 " highlight current line
@@ -45,17 +45,21 @@ Plug 'preservim/nerdtree'
 " nord-vim colorscheme
 Plug 'arcticicestudio/nord-vim'
 
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Ale
 Plug 'dense-analysis/ale'
-
-" YouCompleteMe
-Plug 'ycm-core/YouCompleteMe'
 
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Coc
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Vimtex
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -98,16 +102,16 @@ let g:ale_fixers = {
 \   'haskell': ['hlint'],
 \}
 
-" YouCompleteMe
-let g:ycm_max_num_candidates = 10
-"nnoremap <silent> <Leader>h :YcmCompleter GetDoc<CR>
-nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-" only works with: c, cpp, c, cpp, cuda, cs, go, java, javascript, rust, typescript
-nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
+" Vimtex
+let g:vimtex_view_method = 'zathura'
+
+" nord settings
+let g:nord_cursor_line_number_background = 1
 
 " Colorscheme and Grey comments
 colorscheme nord
 highlight Comment ctermfg=grey
+
 
 " show the status line all the time
 set laststatus=2
