@@ -33,32 +33,27 @@ let mapleader = " "
 " make sure .pl files are interpreted as prolog files
 let g:filetype_pl="prolog"
 
+set noswapfile
+
 """""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""
 
 call plug#begin()
 
-" Nerdtree
 Plug 'preservim/nerdtree'
 
-" nord-vim colorscheme
 Plug 'arcticicestudio/nord-vim'
 
-" fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Ale
 Plug 'dense-analysis/ale'
 
-" Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-" Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Vimtex
 Plug 'lervag/vimtex'
 
 call plug#end()
@@ -101,6 +96,25 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'haskell': ['hlint'],
 \}
+
+
+" FZF
+map <silent> <C-p> :Files<CR>
+let $FZF_DEFAULT_OPTS='--reverse'
+nnoremap <leader>gc :GCheckout<CR>
+
+" Coc
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <F2> <Plug>(coc-rename)
+
+let g:coc_global_extensions = [
+  \ 'coc-pairs',
+  \ 'coc-json',
+  \ 'coc-python',
+  \ ]
 
 " Vimtex
 let g:vimtex_view_method = 'zathura'
