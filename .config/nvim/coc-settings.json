@@ -1,0 +1,7 @@
+{
+  "python.formatting.provider":"black",
+  "python.pythonPath":"python3",
+  "python.linting.enabled": false,
+  "diagnostic.virtualText": true,
+  "diagnostic.displayByAle": false 
+}

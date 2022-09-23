@@ -18,7 +18,6 @@ set number relativenumber
 set hlsearch
 " highlight current line
 set cursorline
-set ruler
 " show matching brackets
 set showmatch
 " long lines don't wrap
@@ -34,6 +33,8 @@ let mapleader = " "
 let g:filetype_pl="prolog"
 
 set noswapfile
+
+let g:ale_disable_lsp = 1
 
 """""""""""""""""""""""""""""
 " Plugins
@@ -76,13 +77,22 @@ let g:NERDTreeQuitOnOpen=1
 " fix files on save
 let g:ale_fix_on_save = 1
 
-" lint after 1000ms after changes are made both on insert mode and normal mode
+" lint after 500ms after changes are made both on insert mode and normal mode
 let g:ale_lint_on_text_changed = 'always'
-let g:ale_lint_delay = 1000
+let g:ale_lint_delay = 500
 
 " use nice symbols for errors and warnings
 let g:ale_sign_error = '✗\ '
 let g:ale_sign_warning = '⚠\ '
+
+" disable linting for languages coc is used for
+let g:ale_linters = {
+\   'c': [], 'cpp': [], 'rust': [], 'go': [], 'python': [], 'sh': [],
+\   'html': [], 'css': [], 'javascript': [], 'typescript': [], 'reason': [],
+\   'json': [], 'vue': [],
+\   'tex': [], 'latex': [], 'bib': [], 'bibtex': []
+\ }
+
 
 " fixer configurations
 let g:ale_fixers = {
@@ -104,6 +114,8 @@ let $FZF_DEFAULT_OPTS='--reverse'
 nnoremap <leader>gc :GCheckout<CR>
 
 " Coc
+
+" GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -113,7 +125,9 @@ nmap <F2> <Plug>(coc-rename)
 let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-json',
-  \ 'coc-python',
+  \ 'coc-docker',
+  \ 'coc-prettier',
+  \ 'coc-pyright',
   \ ]
 
 " Vimtex
