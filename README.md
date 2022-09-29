@@ -51,7 +51,6 @@ Section "InputClass"
         MatchIsPointer "on"
         MatchDevicePath "/dev/input/event*"
         Driver "libinput"
-        Option "NaturalScrolling" "True"
 EndSection
 ```
 
