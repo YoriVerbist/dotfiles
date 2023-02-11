@@ -115,3 +115,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+[ -f "/home/yori/.ghcup/env" ] && source "/home/yori/.ghcup/env" # ghcup-env
