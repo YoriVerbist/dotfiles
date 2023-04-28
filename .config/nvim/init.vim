@@ -36,6 +36,7 @@ set noswapfile
 
 let g:ale_disable_lsp = 1
 
+
 """""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""
@@ -64,8 +65,8 @@ call plug#end()
 """""""""""""""""""""""""""""
 
 " Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " NERDTree
 let NERDTreeShowHidden=1
@@ -97,7 +98,7 @@ let g:ale_linters = {
 " fixer configurations
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black'],
+\   'python': ['flake8'],
 \   'javascript': ['eslint'],
 \   'typescript': ['prettier'],
 \   'html': ['prettier'],
@@ -138,7 +139,7 @@ let g:nord_cursor_line_number_background = 1
 
 " Colorscheme and Grey comments
 colorscheme nord
-highlight Comment ctermfg=grey
+"highlight Comment ctermfg=grey
 
 
 " show the status line all the time
