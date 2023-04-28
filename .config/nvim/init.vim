@@ -133,6 +133,7 @@ let g:coc_global_extensions = [
 
 " Vimtex
 let g:vimtex_view_method = 'zathura'
+let g:tex_flavor='latex'
 
 " nord settings
 let g:nord_cursor_line_number_background = 1
