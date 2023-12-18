@@ -1,40 +1,19 @@
 # dotfiles
 ## Installation
-#### Still work in progress!!!
-```
-sudo apt install git
-git clone https://github.com/YoriVerbist/dotfiles.git
-cd dotfiles
-sudo bash install.sh
-```
+
+## Git
+
+[Fix auth](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
 
 ## NVIM
 
-### Coc
-Make sure node > 14 is installed
-
-#### Haskell
-Install ghcup and isntall ghc and the haskell language server:
-```
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-```
-
-### Markdown preview
-To get this to work node.js and yarn needs to be installed.
+Based on [lazyvim](https://www.lazyvim.org/).
 
 ## Tmux
 Follow the following guide to install the tmux plugins
 
-```
-https://github.com/tmux-plugins/tpm#installing-plugins
-```
+[link](https://github.com/tmux-plugins/tpm#installing-plugins)
 
-## Ale
-Make sure Black (python) and hlint (haskell) is installed:
-```
-pip install black
-sudo apt install hlint
-```
 
 ## Jetbrains font
 [Jetbrains mono](https://www.jetbrains.com/lp/mono/#how-to-install)
