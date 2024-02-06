@@ -9,6 +9,10 @@
 
 Based on [lazyvim](https://www.lazyvim.org/).
 
+### Clangd
+
+If clangd gives errors about standard headers: [stackoverflow link](https://stackoverflow.com/questions/74785927/clangd-doesnt-recognize-standard-headers)
+
 ## Tmux
 Follow the following guide to install the tmux plugins
 
