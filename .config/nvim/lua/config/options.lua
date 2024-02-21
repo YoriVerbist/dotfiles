@@ -13,3 +13,5 @@ opt.scrolloff = 9 -- Lines of context
 opt.swapfile = false -- Disable swap file
 opt.backup = false -- Disable backup
 opt.writebackup = false -- Disable backup
+
+opt.colorcolumn = "120" -- Line length marker
