@@ -1,20 +1,20 @@
--- return {
---     {
---         "stevearc/conform.nvim",
---         optional = true,
---         opts = {
---             formatters_by_ft = {
---                 ["markdown"] = {},
---             },
---         },
---     },
---     {
---         "mfussenegger/nvim-lint",
---         optional = true,
---         opts = {
---             linters_by_ft = {
---                 markdown = {},
---             },
---         },
---     },
--- }
+return {
+    {
+        "stevearc/conform.nvim",
+        optional = true,
+        opts = {
+            formatters_by_ft = {
+                ["markdown"] = {},
+            },
+        },
+    },
+    {
+        "mfussenegger/nvim-lint",
+        optional = true,
+        opts = {
+            linters_by_ft = {
+                markdown = {},
+            },
+        },
+    },
+}
