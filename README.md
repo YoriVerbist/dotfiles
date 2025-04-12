@@ -20,8 +20,15 @@ Follow the following guide to install the tmux plugins
 
 
 ## Jetbrains font
-[Jetbrains mono](https://www.jetbrains.com/lp/mono/#how-to-install)
+[Jetbrains mono (Nerd)](https://www.nerdfonts.com/font-downloads)
 
+Unzip the file somewhere
+
+`sudo mkdir /usr/share/fonts/truetype/jetbrains-mono`
+
+`sudo mv jetbrains-mono/fonts/ttf/*.ttf /usr/share/fonts/truetype/jetbrains-mono`
+
+`fc-cache -f -v`
 
 ## Laptop
 ### Fix natural scrolling
