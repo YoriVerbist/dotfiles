@@ -7,11 +7,11 @@ local opt = vim.opt
 
 -- vim.g.autoformat = false
 
+vim.g.snacks_animate = false
+
 opt.shiftwidth = 4 -- Size of an indent
 opt.tabstop = 4 -- Number of spaces tabs count for
 opt.scrolloff = 9 -- Lines of context
 opt.swapfile = false -- Disable swap file
 opt.backup = false -- Disable backup
 opt.writebackup = false -- Disable backup
-
-opt.colorcolumn = "120" -- Line length marker
