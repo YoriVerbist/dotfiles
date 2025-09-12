@@ -9,6 +9,10 @@
 
 Based on [lazyvim](https://www.lazyvim.org/).
 
+### FZF
+
+Make sure you install the latest version of [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git).
+
 ### Clangd
 
 If clangd gives errors about standard headers: [stackoverflow link](https://stackoverflow.com/questions/74785927/clangd-doesnt-recognize-standard-headers)
