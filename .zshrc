@@ -102,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 alias vim="vim"
 alias vi="nvim"
 
+
+export PATH="$HOME/.fzf/bin:$PATH"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
